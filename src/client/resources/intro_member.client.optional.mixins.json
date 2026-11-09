@@ -1,0 +1,11 @@
+{
+  "required": false,
+  "minVersion": "0.8",
+  "package": "dev.introcinema.mixin.client",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "HumanoidModelMixin",
+    "CameraRollMixin"
+  ],
+  "injectors": { "defaultRequire": 0 }
+}

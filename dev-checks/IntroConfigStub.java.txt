@@ -1,0 +1,6 @@
+package dev.introcinema.common.config;
+import java.util.*;
+public class IntroConfig {
+  public List<String> silhouetteMembers = new ArrayList<>(); public Map<String,String> memberQuotes = new HashMap<>();
+  public int openingDuration=200, memberDuration=140, finaleDuration=260, returnDuration=40;
+}

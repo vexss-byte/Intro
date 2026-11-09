@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "intro_member",
+  "version": "${version}",
+  "name": "Intro Member",
+  "description": "Cinematic multiplayer introduction for every online member, rendered with real players, a custom camera, animation engine and shaders.",
+  "authors": [
+    "Intro Member contributors"
+  ],
+  "license": "All-Rights-Reserved",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dev.introcinema.IntroCinemaMod"
+    ],
+    "client": [
+      "dev.introcinema.client.IntroCinemaClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.20.1",
+    "minecraft": "~26.3",
+    "java": ">=25",
+    "fabric-api": "*"
+  },
+  "mixins": [
+    {
+      "config": "intro_member.client.mixins.json",
+      "environment": "client"
+    },
+    {
+      "config": "intro_member.client.optional.mixins.json",
+      "environment": "client"
+    }
+  ]
+}
