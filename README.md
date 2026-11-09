@@ -16,7 +16,7 @@ Build: `./gradlew build` -> `build/libs/intro-member-0.1.0.jar`. CI: `.github/wo
 | Source code written | all modules listed below |
 | Pure-Java logic compiled + tested | **yes** — `bash dev-checks/run.sh` (JDK 21+, no Minecraft): 64 checks pass |
 | GLSL syntax | **yes** — all 8 fragment shaders + the vertex shader pass `glslangValidator` (GLSL 330 core) |
-| Minecraft-facing code compiled with Loom | **NOT YET** (no Minecraft/Maven access where this was written). Whole-source `javac` shows zero syntax errors; imports were cross-checked against a mod that runs on 26.3 and the Fabric API 26.3 source (74/75 confirmed; the 75th is vanilla `EntityArgument`) |
+| Minecraft-facing code compiled with Loom | **Partly**: in the first real CI run `compileJava` (all server/common code) passed; `compileClientJava` had 2 errors, now fixed (`GL14.glBlendFuncSeparate`, `mc.gui.screen()`). A new CI run is needed to confirm the client side and `build`. Whole-source `javac` shows zero syntax errors; imports were cross-checked against a mod that runs on 26.3 and the Fabric API 26.3 source (74/75 confirmed; the 75th is vanilla `EntityArgument`) |
 | Game launched / feature tested in game | **NO** |
 | Multiplayer / dedicated server tested | **NO** |
 

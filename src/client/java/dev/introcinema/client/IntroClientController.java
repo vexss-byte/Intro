@@ -119,7 +119,7 @@ public final class IntroClientController implements CinematicSequence.Ctx {
             frameTick = clientTick;
             scheduler.advanceTo(clientTick);
             fx.update(clientTick);
-            if (mc.screen == null) KeyMapping.releaseAll();               // no walking/attacking while the show runs
+            if (mc.gui.screen() == null) KeyMapping.releaseAll();               // no walking/attacking while the show runs
             if (holdBlack > 0 && --holdBlack == 0) { shutdown("finished"); return; }
             if (clientTick >= session.plan.total() + 60) shutdown("timeout"); // server end message lost: stop anyway
         } catch (Throwable t) {

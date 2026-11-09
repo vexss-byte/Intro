@@ -111,7 +111,7 @@ public final class PostProcessor {
                 GL11.glDrawArrays(GL11.GL_TRIANGLES, 0, 3);
             }
         } finally {
-            GL11.glBlendFuncSeparate(srcRgb, dstRgb, srcA, dstA);
+            GL14.glBlendFuncSeparate(srcRgb, dstRgb, srcA, dstA);
             GL11.glViewport(vp[0], vp[1], vp[2], vp[3]);
             GL11.glDepthMask(depthMask);
             if (blend) GL11.glEnable(GL11.GL_BLEND); else GL11.glDisable(GL11.GL_BLEND);
